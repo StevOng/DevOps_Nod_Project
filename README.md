@@ -9,13 +9,13 @@ Clone the Repository
 Clone this repository to your local machine using Git:
 
 ```bash
-git clone https://github.com/username/repository-name.git
+git clone https://github.com/StevOng/DevOps_Nod_Project.git
 ```
 
 Navigate into the project directory:
 
 ```bash
-cd repository-name
+cd DevOps_Nod_Project
 ```
 
 Install Dependencies
