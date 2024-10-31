@@ -1,5 +1,5 @@
 import User from "../models/users.js"
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 
 const login = (req,res,next) => {
     let msg = req.session.err || ""
