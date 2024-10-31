@@ -40,6 +40,7 @@ feat1.onclick = () => {
   console.log(faceapi.nets);
 
   Promise.all([
+    faceapi.nets.ageGenderNet.loadFromUri("js/model"),
     faceapi.nets.ssdMobilenetv1.loadFromUri("js/model"),
     faceapi.nets.tinyFaceDetector.loadFromUri("js/model"),
     faceapi.nets.faceLandmark68Net.loadFromUri("js/model"),
@@ -51,7 +52,8 @@ feat1.onclick = () => {
     const detections = await faceapi
       .detectAllFaces(video)
       .withFaceLandmarks()
-      .withFaceExpressions();
+      .withFaceExpressions()
+      .withAgeAndGender();
     console.log(detections);
 
     ctx.clearRect(0, 0, width, height);
@@ -61,6 +63,16 @@ feat1.onclick = () => {
     faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
 
     console.log(resizedDetections);
+    resizedDetections.forEach((result) => {
+      const { age, gender, genderProbability } = result;
+      new faceapi.draw.DrawTextField(
+        [
+          `${Math.round(age, 0)} Tahun`,
+          `${gender} ${Math.round(genderProbability)}`,
+        ],
+        result.detection.box.bottomRight
+      ).draw(canvas);
+    });
   }
 
   video.addEventListener("play", () => {
