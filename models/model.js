@@ -1,6 +1,6 @@
 import { Sequelize,DataTypes } from "sequelize";
 
-const sequelize = new Sequelize('mydatabase', 'myuser','mypassword', {
+const sequelize = new Sequelize('mydb', 'myuser','mypassword', {
     host: 'mysql',
     dialect: 'mysql'
 })

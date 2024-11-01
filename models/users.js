@@ -1,6 +1,6 @@
 import { sequelize,DataTypes } from "./model.js";
 
-const User = sequelize.define('user', {
+const User = sequelize.define('users', {
     id: {
         type: DataTypes.TINYINT,
         primaryKey: true,
