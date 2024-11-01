@@ -2,7 +2,6 @@ import express from "express";
 import session from "express-session";
 import { sequelize } from "./models/model.js";
 import userRoutes from "./models/routers/user.js";
-import User from "./models/users.js";
 
 const app = express();
 const port = 3000;
