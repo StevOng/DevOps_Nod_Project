@@ -1,7 +1,7 @@
 FROM node:20-alpine
 ENV NODE_ENV production
 ENV port 3000
-WORKDIR /app
+WORKDIR /apps
 RUN apk add --no-cache mysql-client
 COPY package*.json ./
 RUN npm install

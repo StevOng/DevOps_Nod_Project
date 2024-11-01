@@ -1,0 +1,25 @@
+{
+  "name": "kelompok",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "docker-build": "docker build -t nod-project:0.0.2 -f Dockerfile.prod .",
+    "docker-run": "docker run -it -p 3000:3000 --name nod-project-a nod-project:0.0.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "face-api.js": "^0.22.2",
+    "mysql2": "^3.2.3",
+    "sequelize": "^6.31.0"
+  }
+}
