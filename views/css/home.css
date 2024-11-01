@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+body {
+    background-color: #000000;
+}
+
+.navbar-brand {
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 110px #0fa;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-left: 30px;
+    letter-spacing: 2px;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.4px);
+    -webkit-backdrop-filter: blur(4.4px);
+    -moz-box-shadow: 0 0 25px #fff;
+    -webkit-box-shadow: 0 0 25px #0fa;
+    box-shadow: 0 0 20px #0fa;
+}
+
+h3 {
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 110px #0fa;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1 {
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 110px #0fa;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.btn:hover{
+    background: #0fa;
+    color: #050801;
+    box-shadow: 0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #fff,
+                0 0 42px #0fa,
+                0 0 82px #0fa,
+                0 0 92px #0fa,
+                0 0 102px #0fa,
+                0 0 110px #0fa;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
+.btn{
+    position: relative;
+    display: inline-block;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 110px #0fa;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 30px;
+   
+}
+
+.btn:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+.btn:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+.btn span{
+    position: absolute;
+    display: block;
+}
+.btn span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#0fa);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+
+.btn span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#0fa);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+.btn span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#0fa);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+
+.btn span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#0fa);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
