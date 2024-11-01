@@ -1,0 +1,9 @@
+FROM node:20-alpine
+ENV NODE_ENV production
+ENV port 3000
+WORKDIR /app
+RUN apk add --no-cache mysql-client
+COPY package*.json ./
+RUN npm install
+COPY . .
+CMD [ "node", "index.js" ]
