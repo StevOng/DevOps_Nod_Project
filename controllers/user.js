@@ -79,8 +79,8 @@ const accDel = async(req,res,next) => {
 }
 
 const renEdit = (req,res,next) => {
-    let err = req.session.err || ""
-    res.render('edit',{msg: err, user: req.session.user||""}) 
+    let errs = req.session.err || ""
+    res.render('edit',{msg: errs, user: req.session.user||""}) 
 }
 
 const accEdit = async(req,res,next) => {

@@ -19,7 +19,7 @@ router.post('/edit', userAuth.accEdit)
 
 router.get('/create_user_db', (req,res) => {
     User.sync({alter:true})
-    res.end('User table created')
+    res.end('User table create')
 })
 
 router.get('/dropUserDb', (req,res) => {
