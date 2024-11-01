@@ -24,7 +24,6 @@ app.set("view engine", "ejs");
 app.use("/", [userRoutes]);
 
 app.get("/", (req, res) => {
-  // let result = await User.findOne({where: {email: req.body.email}})
   res.render("home", { user: req.session.user });
 });
 
