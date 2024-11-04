@@ -40,6 +40,14 @@ const auth = (req, res, next) => {
   })
 }
 
+const hashPasswordAndValidate = async (password) => {
+  if (password.length < 4) {
+    return { error: 'Password must be at least 4 characters' }
+  }
+  const hashed = await bcrypt.hash(password, 10)
+  return { hashed }
+}
+
 const register = (req, res, next) => {
   const err = req.session.err || ''
   req.session.user = ''
@@ -47,10 +55,9 @@ const register = (req, res, next) => {
 }
 
 const regist = async (req, res, next) => {
-  const myPass = req.body.password
-  const hashed = await bcrypt.hash(myPass, 10)
-  if (myPass.length < 4) {
-    req.session.err = 'Password must at least 4 characters'
+  const { error, hashed } = await hashPasswordAndValidate(req.body.password)
+  if (error) {
+    req.session.err = error
     res.redirect('/register')
   } else {
     await User.create({
@@ -81,17 +88,19 @@ const renEdit = (req, res, next) => {
 }
 
 const accEdit = async (req, res, next) => {
-  const myPass = req.body.password
-  const hashed = await bcrypt.hash(myPass, 10)
-  if (myPass.length < 4) {
-    req.session.err = 'Password must at least 4 characters'
+  const { error, hashed } = await hashPasswordAndValidate(req.body.password)
+  if (error) {
+    req.session.err = error
     res.redirect('/edit')
   } else {
-    await User.update({
-      email: req.body.email,
-      username: req.body.username,
-      password: hashed
-    }, { where: { id: req.session.user.id } })
+    await User.update(
+      {
+        email: req.body.email,
+        username: req.body.username,
+        password: hashed
+      },
+      { where: { id: req.session.user.id } }
+    )
     req.session.user = ''
     res.redirect('/login')
   }
