@@ -22,10 +22,9 @@ body {
 }
 
 nav {
-  background: rgba(255, 255, 255, 10%);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 10%);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4.4px);
-  box-shadow: 0 0 20px #0fa;
 }
 
 h3,
@@ -108,7 +107,6 @@ h1 {
   0% {
     left: -100%;
   }
-  
   50%,
   100% {
     left: 100%;
@@ -129,7 +127,6 @@ h1 {
   0% {
     top: -100%;
   }
-  
   50%,
   100% {
     top: 100%;
@@ -143,14 +140,13 @@ h1 {
   height: 2px;
   background: linear-gradient(270deg, transparent, #0fa);
   animation: animate3 1s linear infinite;
-  animation-delay: 0.50s;
+  animation-delay: 0.5s;
 }
 
 @keyframes animate3 {
   0% {
     right: -100%;
   }
-  
   50%,
   100% {
     right: 100%;
@@ -171,7 +167,6 @@ h1 {
   0% {
     bottom: -100%;
   }
-  
   50%,
   100% {
     bottom: 100%;
