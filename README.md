@@ -39,6 +39,8 @@ Anda bisa menjalankan website ini dengan dua cara: tanpa Docker atau dengan Dock
 
 # Teknologi yang digunakan
 
-**Node.js & Express**-Framework server-side JavaScript
-**face-api.js**-API Javascript untuk face detection di browser
-**Docker**-Containerization untuk kemudahan deploy
+**Node.js & Express**-Framework server-side JavaScript.
+
+**face-api.js**-API Javascript untuk face detection di browser.
+
+**Docker**-Containerization untuk kemudahan deploy.
