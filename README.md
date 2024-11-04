@@ -1,6 +1,6 @@
 # Nod Face Detection
 
-Ini adalah proyek web site berbasis Node.js dan Express yang menggunakan face-api.js untuk mendeteksi ekspresi wajah, estimasi umur, dan jenis kelamin.
+Ini adalah proyek aplikasi web berbasis Node.js dan Express yang menggunakan face-api.js untuk mendeteksi ekspresi wajah, estimasi umur, dan jenis kelamin.
 
 ## Instalasi
 
@@ -17,9 +17,9 @@ Ini adalah proyek web site berbasis Node.js dan Express yang menggunakan face-ap
     npm install
     ```
 
-## Menjalankan Web site
+## Menjalankan Aplikasi Web
 
-Anda bisa menjalankan web site ini dengan dua cara: tanpa Docker atau dengan Docker.
+Anda bisa menjalankan aplikasi web ini dengan dua cara: tanpa Docker atau dengan Docker.
 
 1. **Menjalankan tanpa Docker**:
 
