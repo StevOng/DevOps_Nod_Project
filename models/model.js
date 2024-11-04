@@ -1,8 +1,8 @@
-import { Sequelize,DataTypes } from "sequelize";
+import { Sequelize, DataTypes } from 'sequelize'
 
-const sequelize = new Sequelize('mydb', 'myuser','mypassword', {
-    host: 'mysql',
-    dialect: 'mysql'
+const sequelize = new Sequelize('mydb', 'myuser', 'mypassword', {
+  host: 'mysql',
+  dialect: 'mysql'
 })
 
-export {sequelize,DataTypes} 
+export { sequelize, DataTypes }
