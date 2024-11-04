@@ -31,11 +31,27 @@ Anda bisa menjalankan website ini dengan dua cara: tanpa Docker atau dengan Dock
 
 2. **Menjalankan dengan docker-compose**:
 
-  Jika anda ingin menggunakan Docker, jalankan perintah berikut di terminal:
+   Jika anda ingin menggunakan Docker, jalankan perintah berikut di terminal:
 
-  ```bash
-  docker-compose up
-  ```
+   ```bash
+   docker-compose up
+   ```
+
+   Untuk menghentikan layanan yang berjalan dengan docker-compose, Anda bisa menggunakan perintah berikut:
+
+   ```bash
+   docker-compose down
+   ```
+
+   Perintah ini akan menghentikan dan menghapus semua container, network, dan volume yang dibuat oleh **docker-compose up**.
+
+   Jika anda hanya ingin menghentikan container tanpa menghapusnya, gunakan:
+
+   ```bash
+   docker-compose stop
+   ```
+
+   Ini akan menghentikan container tanpa menghapus network atau volume, sehingga Anda bisa melanjutkan layanan nanti tanpa membangun ulang semuanya.
 
 # Teknologi yang digunakan
 
