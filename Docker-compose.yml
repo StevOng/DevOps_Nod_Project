@@ -28,7 +28,7 @@ services:
 
   app:
     build:
-      context: ../kelompok
+      context: ../DevOps_Nod_Project
       dockerfile: Dockerfile.prod
     container_name: nod-project
     ports:
