@@ -18,7 +18,7 @@ feat1.onclick = () => {
         </a>
       </div>
     </div>`
-  
+
   const video = document.getElementById('webcam')
   const canvas = document.body.appendChild(document.createElement('canvas'))
   const ctx = canvas.getContext('2d')
