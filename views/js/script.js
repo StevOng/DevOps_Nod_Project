@@ -1,3 +1,4 @@
+/* global faceapi */
 const container = document.getElementById('container')
 const feat1 = document.getElementById('feat1')
 feat1.onclick = () => {
