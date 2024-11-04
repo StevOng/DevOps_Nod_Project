@@ -17,7 +17,7 @@ Ini adalah proyek website berbasis Node.js dan Express yang menggunakan face-api
     npm install
     ```
 
-# Menjalankan Website
+## Menjalankan Website
 
 Anda bisa menjalankan website ini dengan dua cara: tanpa Docker atau dengan Docker.
 
@@ -53,7 +53,7 @@ Anda bisa menjalankan website ini dengan dua cara: tanpa Docker atau dengan Dock
 
    Ini akan menghentikan container tanpa menghapus network atau volume, sehingga Anda bisa melanjutkan layanan nanti tanpa membangun ulang semuanya.
 
-# Teknologi yang digunakan
+## Teknologi yang digunakan
 
 **Node.js & Express**-Framework server-side JavaScript.
 
